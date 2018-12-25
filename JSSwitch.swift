@@ -164,11 +164,13 @@ public class JSSwitch: NSControl {
 
 	// MARK: - Events
 	public override func mouseDown(with theEvent: NSEvent) {
+        super.mouseDown(with: theEvent)
 		pressed = true
 		needsDisplay = true
 	}
 
 	public override func mouseUp(with theEvent: NSEvent) {
+        super.mouseUp(with: theEvent)
 		pressed = false
 		on = !on
 
