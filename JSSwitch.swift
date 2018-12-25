@@ -171,5 +171,9 @@ public class JSSwitch: NSControl {
 	public override func mouseUp(with theEvent: NSEvent) {
 		pressed = false
 		on = !on
+
+        if(action != nil && target != nil) {
+            sendAction(action, to: target)
+        }
 	}
 }
